@@ -1,0 +1,1522 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!--
+	
+FOR ADDITIONAL SUPPORT: Contact the developer at http://www.themeforest.net/user/egobuilders
+
+In this file "index.html":
+	鈥� Change logo images and site/company name in this file (logos are in the "images" folder)
+	鈥� Make all text content changes in this file
+	鈥� Edit navigation menu in this file (text on buttons should match id of section it scrolls to - not case sensitive)
+	
+See "style.css" to update crew photos, background images, fonts, colors, and other CSS (all images are in the "images" folder, except for gallery photos and thumbnails)
+
+See "gallery.xml" to edit gallery text captions, photos, and links to youtube or vimeo videos (all thumbnails and photos for the gallery are in the "gallery" folder)
+
+(The video player in the gallery does not currently support other file types, such as .mov, .avi, .mpg, .flv, etc., but the developer can add that feaure upon request)
+
+**********************************************************************************************
+
+HTML TABLE OF CONTENTS
+
+1.0 - <head> - load style.css and responsive.css, Google Fonts, and javascript/jQuery files
+
+2.0 - <body> - website layout
+
+	2.1 - home
+	
+	2.2 - header - navigation menu, logo, and color-picker
+		2.2.1 - navigation menu
+		2.2.2 - logo
+		2.2.3 - color-picker
+		
+	2.3 - gallery
+	
+	2.4 - crew
+		2.4.1 - crew member social networking icons
+			2.4.1.1 - crew member 1 social networking icons
+			2.4.1.2 - crew member 2 social networking icons
+		2.4.2 - crew member photo
+			2.4.2.1 - crew member 1 photo
+			2.4.2.2 - crew member 2 photo
+			
+	2.5 - about
+	
+	2.6 - responsive (just the section name, not the responsive programming)
+	
+	2.7 - contact - AJAX, jQuery, PHP eMail form
+		2.7.1 - social networking icons below contact section
+		
+	2.8 - footer, footer logo
+	
+3.0 - overlays (see gallery.xml file) - gallery, gallery captions, gallery buttons, and "Loading" page
+	3.1 - "full" is the fullsized gallery - contains slideshow photos and videos
+	3.2 - gallery captions, gallery buttons
+	3.3 - gallery slideshow captions
+	3.4 - "LOADING" page
+	
+4.0 - <script> - load additional external jquery files before closing body tag
+
+5.0 </body> - close the body tag
+
+**********************************************************************************************
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+	
+1.0 - <head> - load external css, Google Fonts, and jquery files
+
+-->
+
+<head>
+	<title>
+		Ascende
+	</title>
+	
+	<meta name="Description" content="portfolio" />
+	<meta name="Keywords" content="portfolio" />
+	
+	<meta http-equiv="Content-Type" value="text/html; charset=UTF-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	
+	<!-- DISABLE COMPATIBILITY MODE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	
+	<!-- CSS -->
+	<link href="style.css" type="text/css" media="screen" rel="stylesheet" />
+	<link href="responsive.css" type="text/css" media="screen" rel="stylesheet" />
+	
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,100italic' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:100italic,200italic,300italic,400italic,600italic,700italic,800italic,100,200,300,400,600,700,800' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,400italic,700,700italic' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css' />
+	
+	<!-- Javascript / jQuery -->
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="js/detect_browser.js"></script>
+	<script type="text/javascript" src="js/detect_os.js"></script>
+	
+	<!-- html5.js for IE less than 9 -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- css3-mediaqueries.js for IE less than 9 -->
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+	
+</head>
+
+
+
+
+
+
+<!--
+
+2.0 - <body> - website layout
+
+-->
+
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42485948-1', 'egobuilders.net');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- not visible while full screen slideshow is active -->
+<div id="site" class="layer">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.1 - home
+
+-->
+
+<div id="home" class="layer home-click bg-home">
+	
+	<div id="logo-home" class="white">
+		
+		<!-- OPTIONAL - you CAN put ANOTHER logo here if you remove the "comment" tags below -->
+		
+		<!--
+		<div class="pad-bottom-40">
+			<img src="images/logo_home.png" alt="" />
+		</div>
+		-->
+		
+		<h1 class="text-color logo-font">ASCENDE</h1>
+		
+		<h5 class="tagline">RESPONSIVE CREATIVE PORTFOLIO</h5>
+		<h5 class="tagline">VIMEO &amp; YOUTUBE SUPPORT</h5>
+		<h5 class="tagline">AJAX CONTACT FORM</h5>
+		<h5 class="tagline">EASY TO USE</h5>
+		<h5 class="tagline">COOL</h5>
+		
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.2 - menu, logo, and color-picker
+
+-->
+
+<div id="menu" class="layer bg-black">
+	<div class="responsive">
+		
+		
+		
+		<div id="menu-btn">
+			<div class="menu-btn-padding text-color">Menu</div><!-- only visible on smaller screens -->
+		</div>
+		
+		
+		
+		<!--
+		
+		2.2.1 - navigation menu
+		
+		-->
+		
+		<div class="header-width-43 the-nav">
+			
+			<div class="the-nav-padding">
+			
+				<a class="menu">Home</a>
+				<a class="menu">Gallery</a>
+				<a class="menu">Crew</a>
+				<a class="menu">About</a>
+				<a class="menu">Responsive</a>
+				<a class="menu">Contact</a>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		<!--
+		
+		2.2.2 - logo
+		
+		-->
+		
+		<div class="header-width-14 the-logo">
+			
+			<div id="logo-nav" class="bg-color center"><!-- change "bg-color" in class here to "bg-black" when your logo is added -->
+				
+				<!-- your logo goes here - change "bg-color" in class above to "bg-black" -->
+				
+				<img src="images/logo_nav.png" alt="" />
+				
+				<!-- your logo goes above here -->
+			
+			</div>
+			
+		</div>
+		
+		
+		
+		<!--
+		
+		2.2.3 - color-picker
+		
+		-->
+		
+		<div class="header-width-43 the-picker">
+			
+			<div class="the-color-picker">
+				
+				<div class="monitor">&nbsp;</div>
+				
+				<div class="colors">
+					
+					<a id="start" name="yellow" class="color-picker" style="background-color:#ffee00;">&nbsp;</a>
+					<a name="salmon" class="color-picker" style="background-color:#ff7766;">&nbsp;</a>
+					<a name="pink" class="color-picker" style="background-color:#ee5599;">&nbsp;</a>
+					<a name="mint" class="color-picker" style="background-color:#00ddaa;">&nbsp;</a>
+					<a name="lavendar" class="color-picker" style="background-color:#8899dd;">&nbsp;</a>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		<!-- end header sections -->
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.3 - gallery
+
+-->
+
+<div id="gallery" class="layer bg-white padder-top padder-bottom">
+	
+	<div class="responsive">
+		
+		
+		
+		<div class="width-50">
+		
+			<div class="hpad">
+		
+				<div id="thumbs" class="align-center">
+					
+					<!--
+						Update gallery thumbnails, captions, photos, and videos in gallery.xml
+						The thumbanils are loaded into this div, "thumbs"
+					-->
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- right side -->
+		
+		<div class="width-50">
+		
+			<div class="hpad">
+				
+				<h1 class="charcoal">
+					Our <span class="text-color-on-white">XML Gallery</span> supports <span class="text-color-on-white">Unlimited</span> Photos &amp; Videos with <span class="text-color-on-white">Custom Captions</span>
+				</h1>
+				
+				<h3 class="charcoal">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam quis nostrud exerci tation ullamcorper. 
+				</h3>
+				
+				<div class="text grey">
+					
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim ad. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor.</p>
+				</div>
+				
+				<button name="crew" class="scroll-button button-text-color">
+					Meet the Crew
+				</button>
+				
+			</div>
+		
+		</div>
+		
+		<!-- end sections -->
+		
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.4 - crew
+
+-->
+
+<div id="crew" class="layer bg-charcoal padder-top padder-bottom">
+	
+	<div class="responsive">
+		
+		<!-- left side -->
+		
+		<div class="width-50">
+		
+			<div class="hpad">
+				
+				<h1 class="white">
+					Hundreds of Impressive <span class="text-color">Google Fonts</span> to Enhance Your <span class="text-color">Website</span>
+				</h1>
+				
+				<h3 class="white">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna.
+				</h3>
+				
+				<div class="text grey">
+					
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+					
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat ut wisi enim..</p>
+					
+				</div>
+				
+				<button name="about" class="scroll-button button-text-color">
+					Learn About Us
+				</button>
+				
+			</div>
+		
+		</div>
+		
+		<!-- right side -->
+		
+		<div class="width-50">
+			
+			<div class="hpad">
+				
+				<!-- crew member -->
+				
+				<div class="crew-holder">
+					
+					<div class="crew-main">
+						
+						<div class="crew-left">
+							
+							<div class="crew-content">
+								<h4 class="crew-name text-color">Fletcher Peterson</h4>
+								<div class="crew-title silver">Marketing Director</div>
+								
+								<div class="crew-text metal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</div>
+							</div>
+							
+							<!--
+							
+							2.4.1.1 - crew member 1 social networking icons
+							
+							-->
+							
+							<div class="crew-social">
+								<a href="http://www.__________.com" class="social-crew icon-twitter">&nbsp;</a>
+								<a href="http://www.__________.com" class="social-crew icon-linkedin">&nbsp;</a>
+								<a href="http://www.__________.com" class="social-crew icon-facebook">&nbsp;</a>
+							</div>
+							
+						</div>
+						
+						<div class="crew-right">
+							
+							<div class="crew-frame">
+								
+								<!--
+								
+								2.4.2.1 - crew member 1 photo
+								
+								-->
+								
+								<div class="crew-photo crew-1 border-bottom-color">
+									&nbsp;
+								</div>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<!-- crew member -->
+				
+				<div class="crew-holder">
+					
+					<div class="crew-main">
+						
+						<div class="crew-left">
+							
+							<div class="crew-content">
+								<h4 class="crew-name text-color">Erica Halifax</h4>
+								<div class="crew-title silver">Design &amp; Branding</div>
+								
+								<div class="crew-text metal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation.</div>
+							</div>
+							
+							<!--
+							
+							2.4.1.2 - crew member 2 social networking icons
+							
+							-->
+							
+							<div class="crew-social">
+								<a href="http://www.__________.com" class="social-crew icon-twitter">&nbsp;</a>
+								<a href="http://www.__________.com" class="social-crew icon-linkedin">&nbsp;</a>
+								<a href="http://www.__________.com" class="social-crew icon-facebook">&nbsp;</a>
+							</div>
+							
+						</div>
+							
+						<div class="crew-right">
+							
+							<div class="crew-frame">
+								
+								<!--
+								
+								2.4.2.2 - crew member 2 photo
+								
+								-->
+								
+								<div class="crew-photo crew-2 border-bottom-color">
+									&nbsp;
+								</div>
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				<!-- end of crew members -->
+				
+			</div>
+		
+		</div>
+		
+		<!-- end sections -->
+		
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.5 - about
+
+-->
+
+<div id="about" class="layer bg-about padder-top pad-bottom">
+	
+	<div class="responsive">
+		
+		<!-- left side -->
+		
+		<div class="width-50 disappear">
+			&nbsp;
+		</div>
+		
+		<!-- right side -->
+		
+		<div class="width-50">
+		
+			<div class="hpad">
+				
+				<h1 class="white">
+					<span class="text-color">Expand</span> this Layout into <span class="text-color">Additional Pages</span> and Captivate Your <span class="text-color">Audience</span>
+				</h1>
+				
+				<h3 class="white">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna.
+				</h3>
+				
+				<div class="text white">
+					
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel  eum iriure dolor in hendrerit. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat duis autem vel eum.<p>
+						
+				</div>
+				
+				<button name="contact" class="scroll-button button-dark">
+					Contact Us Today
+				</button>
+				
+			</div>
+		
+		</div>
+		
+		<!-- end sections -->
+		
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.6 - responsive
+
+-->
+
+<div id="responsive" class="layer bg-color padder-top padder-bottom">
+	
+	<div class="responsive">
+		
+		<!-- first row -->
+		
+		<div class="width-10">
+			&nbsp;
+		</div>
+		
+		<div class="width-80">
+		
+			<div class="hpad">
+				
+				<div class="center-to-left">
+				
+					<h1 class="white-alt pad-bottom-20">
+						Responsive. <span class="black">Smooth.</span> Engaging.
+					</h1>
+					
+					<h4 class="black">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit.
+					</h4>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div class="width-10">
+			&nbsp;
+		</div>
+		
+		<!-- new row -->
+		
+		<div class="clear promo-icons pad-top-shrink">
+			
+			<div class="hpad promo-center">
+			
+				<div class="promo-it-pc-holder center break-center">
+					
+						<div class="it-pc">&nbsp;</div>
+						<h2 class="white-alt pad-top-20">Yes.</h2>
+						
+				</div>
+
+				<div class="promo-it-tablet-holder center break-center">
+					
+						<div class="it-tablet">&nbsp;</div>
+						<h2 class="white-alt pad-top-20">Yes.</h2>
+					
+				</div>
+				
+				<div class="promo-it-smartphone-holder center break-center">
+					
+						<div class="it-smartphone">&nbsp;</div>
+						<h2 class="white-alt pad-top-20">Yes.</h2>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- new row -->
+		
+		<div class="clear promo-text center-to-left">
+		
+			<div class="hpad">
+				
+				<div class="text black pad-top pad-bottom-important">
+					
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</p>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- end rows -->
+		
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.7 - contact - AJAX, jQuery, PHP eMail form
+
+-->
+
+<div id="contact" class="layer bg-contact padder-top">
+	
+	<div class="responsive">
+		
+		<!-- left side -->
+		
+		<div class="width-50">
+		
+			<div class="hpad">
+			
+				<h1 class="white">
+					<span class="text-color">Responsive</span>
+					<br />AJAX eMail Form
+					<br /><span class="text-color">With Validation</span>
+				</h1>
+				
+				<h3 class="email-subheader white">
+					Ascende Provides Excellent Support
+				</h3>
+				
+				<div class="address text">
+					
+					<div class="address-street white float table pad-left border-left-1  pad-right">
+						Ascende
+						<br />123 Creative Way
+						<br />London, NY 90210
+						<br />+88 999.555.777
+					</div>
+					
+					<div class="address-email charcoal float table pad-left border-left-1">
+						<a class="text-color" href="mailto:support@ascende.xom">support@ascende.xom</a>
+					</div>
+					
+				</div>
+				
+				<h3 class="grey none">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna nibh.
+				</h3>
+				
+				<div class="text grey pad-top-20 none">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		<!-- right side -->
+		
+		<div class="width-50">
+			
+			<div class="hpad">
+				
+				<div id="email-form" class="clear">
+					
+					<div class="email-main">
+						
+						<div class="form-holder">
+							
+							<h5 class="white contact-label">
+								Name <span class="text-color" id="name-error"></span>
+							</h5>
+							<div class="input-underline border-color">
+								<input id="name" class="input-offset" type="text" value="Try me..." onFocus="if ($(this).val()=='Try me...'){$(this).val('')}" />
+							</div>
+							
+							<h5 class="white contact-label">
+								eMail <span class="text-color" id="email-error"></span>
+							</h5>
+							<div class="input-underline border-color">
+								<input id="email" class="input-offset" type="text" />
+							</div>
+							
+							<h5 class="white contact-label">
+								Comments <span class="text-color" id="comments-error"></span>
+							</h5>
+							<div class="textarea-underline border-color">
+								<textarea id="comments" class="textarea-offset" cols="" rows=""></textarea>
+							</div>
+							
+						</div>
+						
+						<div class="pad-top-button">
+							<button id="send-btn" class="button-color">
+								Send
+							</button>
+						</div>
+						
+					</div>
+						
+				</div>
+				
+				<div id="email-confirmation">
+					<h1 class="white"><span class="text-color">Thank You! <br /></span>Your eMail <br /><span class="text-color">Has Been Sent</span></h1>
+					
+					<h3 class="email-subheader white">
+						We will respond as soon as possible.
+					</h3>
+					
+					<div class="pad-top-40">
+						<button id="return-to-form" class="button-color">
+							Return to Contact Form
+						</button>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<!-- end sections -->
+		
+	</div>
+	
+	<div class="pad-bottom-contact"></div>
+	
+	
+	
+	<!--
+
+	2.7.1 - social networking icons below contact section
+
+	-->
+
+	<div class="bg-socnet-ghost">
+		
+		<div class="footer-socnet center">
+			
+			<a href="http://www.__________.com" class="social-footer icon-facebook">&nbsp;</a>
+			<a href="http://www.__________.com" class="social-footer icon-twitter">&nbsp;</a>
+			<a href="http://www.__________.com" class="social-footer icon-linkedin">&nbsp;</a>
+			<a href="http://www.__________.com" class="social-footer icon-google">&nbsp;</a>
+			<a href="http://www.__________.com" class="social-footer icon-vimeo">&nbsp;</a>
+			<a href="http://www.__________.com" class="social-footer icon-youtube">&nbsp;</a>
+			
+		</div>
+		
+	</div>
+	
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+<!--
+<div id="socnet" class="layer bg-socnet">
+	
+	<div class="bg-socnet-ghost">
+		
+		<div class="footer-socnet center">
+			<a href="" class="social-footer facebook-footer">&nbsp;</a>
+			<a href="" class="social-footer twitter-footer">&nbsp;</a>
+			<a href="" class="social-footer linkedin-footer">&nbsp;</a>
+			<a href="" class="social-footer google-footer">&nbsp;</a>
+			<a href="" class="social-footer vimeo-footer">&nbsp;</a>
+			<a href="" class="social-footer youtube-footer">&nbsp;</a>
+		</div>
+		
+	</div>
+	
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+2.8 - footer, footer logo
+
+-->
+
+<div id="footer" class="layer bg-black">
+	
+	<div class="responsive">
+		
+		<div class="width-100 center">
+			
+			<div id="logo-footer" class="go-to-top">
+				
+				<!-- your logo goes here -->
+				
+				<img src="images/logo_footer.png" alt="" />
+				
+				<!-- your logo goes above here -->
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+</div><!-- END #SITE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+3.0 - overlays (see gallery.xml file) - gallery, gallery captions, gallery buttons, and "Loading" page
+
+-->
+
+
+
+
+
+<!--
+
+3.1 - "full" is the fullsized gallery - contains slideshow photos and videos
+
+-->
+
+<div id="full"></div>
+
+
+
+
+
+<!--
+
+3.2 - gallery captions, gallery buttons
+
+-->
+
+<div id="slideshow-header">
+
+	<div id="controls">
+		
+		<!-- gallery header -->
+		<h1 id="gallery-header" class="white pad none"></h1>
+		
+		<!-- button: hide slideshow -->
+		<div id="hide-slideshow">
+			&nbsp;
+		</div>
+
+		<!-- button: show/hide slideshow captions -->
+		<div id="toggle-captions">
+			&nbsp;
+		</div>
+		
+		<div id="gallery-left">&nbsp;</div>
+		<div id="gallery-right">&nbsp;</div>
+		
+	</div>
+	
+</div>
+
+
+
+
+
+<!--
+
+3.3 - gallery slideshow captions
+
+-->
+
+<div id="captions" class="bg-white">
+	
+	<div class="captions-pad">
+		
+		<div class="gallery-caption-content">
+			<h1 id="gallery-title" class="charcoal-important">&nbsp;</h1>
+			<div id="gallery-description" class="grey">&nbsp;</div>
+			<div id="gallery-link">&nbsp;</div>
+		</div>
+		
+		<div id="hide-captions">&nbsp;</div>
+		
+	</div>
+	
+</div>
+
+
+
+
+
+<!--
+
+3.4 - "LOADING" page
+
+-->
+
+<div id="intro" class="center bg-black">
+	<div id="loading">
+		
+		<div id="logo-loading" class="bg-color center">
+			
+			<!-- your logo goes here - change "bg-color" above to "bg-black" -->
+			
+			<img src="images/logo_nav.png" alt="" />
+			
+			<!-- your logo goes above here -->
+		
+		</div>
+		
+		<h6 class="loading-text white pad-bottom-20">
+			LOADING
+		</h6>
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+4.0 - <script> - load additional external jquery files
+
+-->
+
+<div id="stats" class="none" style="position:fixed;right:0px;bottom:0px;padding:2px 5px;color:#ffffff;background-color:#000000;font-size:15px;"></div>
+
+<!-- website jQuery functionality -->
+<script type="text/javascript" src="js/functions.js"></script>
+
+<!-- eMail validation -->
+<script type="text/javascript" src="js/email.js"></script>
+
+<!-- color picker -->
+<script type="text/javascript" src="js/color.js"></script>
+
+
+
+
+<!--
+
+5.0 </body> - close the body tag
+
+-->
+
+</body>
+
+</html>
