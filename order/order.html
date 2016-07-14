@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+<title>订单系统2015</title>
+
+<script language="javascript" src="head.js" ></script>
+
+<script type="text/javascript" src="diqu.js"></script>
+
+<link href="css.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+
+#wforder {
+
+	width:100%;
+
+	background:#FFF;
+
+}
+
+.wftitle, .wfsubbox input {
+
+	background:#0C0;
+
+}
+
+.yqlj {
+
+	width:95%;
+
+	height:24px;
+
+	text-align:center;
+
+	line-height:24px;
+
+	margin:0 auto;
+
+}
+
+.yqlj a {
+
+	color:#00F;
+
+	font-size:14px;
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div id="wforder">
+
+  <div class="wfwarp">
+
+    <form action="order.php" method="post" name="form" id="form">
+
+      <input name="wid" type="hidden" value="48" />
+
+      <script type="text/javascript">
+
+	  document.writeln("<input name=\"dzdm\" type=\"hidden\" value=\""+dzdm+"\" />");
+
+	  document.writeln("<input name=\"url\" type=\"hidden\" value=\""+url+"\" />");
+
+	  </script>
+
+      <div class="wftitle" style=" text-align:center;">在线快速订购</div>
+
+      <div class="wfbdbox">
+
+        <label class="wfbdxxcp"><em>*</em>选择产品套餐</label>
+
+        <div class="wfdxboxcp red">
+
+          <input type="radio" name="pid" id="a1" value="74" checked  >
+
+          <label for="a1">养鸡技术大全光盘版 298元</label>
+
+          <br>
+
+          <input type="radio" name="pid" id="a2" value="75"  >
+
+          <label for="a2">养鸡技术大全U盘版 298元</label>
+
+          <br>
+          <input type="radio" name="pid" id="a2" value="76"  >
+
+          <label for="a2">养鸡技术大全+养牛技术大全 500元</label>
+
+          <br><input type="radio" name="pid" id="a2" value="77"  >
+
+          <label for="a2">养鸡技术大全+养鱼技术大全 500元</label>
+
+          <br>
+          <input type="radio" name="pid" id="a2" value="78"  >
+
+          <label for="a2">养羊技术大全+养鸡技术大全+养猪技术大全 700元</label>
+
+          <br>
+
+        </div>
+
+      </div>
+
+      <div class="wfbdbox">
+
+        <label  class="wfbdxx"><em>*</em>您的姓名</label>
+
+        <div class="wftextbox">
+
+          <input id="name2" type="text" name="name" style="width:120px;" >
+
+          <label id="sex">
+
+            <input name="sex" style="width:20px;"  type="radio"  value="1" checked="checked" /> 先生</label>
+            <label id="sex">
+
+            <input name="sex" style="width:20px;"  type="radio"  value="0" /> 女士</label>
+
+        </div>
+
+      </div>
+
+      <div class="wfbdbox">
+
+        <label class="wfbdxx"><em>*</em>手机号码</label>
+
+
+        <div class="wftextbox">
+
+          <input type="text" id="tel2" name="tel" onChange="if(!ismobile(this)){value='';}">
+
+        </div>
+
+      </div>
+
+      <div class="wfbdbox">
+
+        <label class="wfbdxx"><em>*</em>所在地区</label>
+
+        <div class="wfxlbox">
+
+          <select class="wfdqxl" name="sheng" id="province3">
+
+          </select>
+
+          <select class="wfdqxl" name="di" id="city3">
+
+          </select>
+
+          <select class="wfdqxl" name="shi" id="area3">
+
+          </select>
+
+        </div>
+
+        <script language="javascript" defer>new PCAS("province3","city3","area3");</script> 
+
+      </div>
+
+      <div class="wfbdbox">
+
+        <label class="wfbdxx"><em>*</em>详细地址</label>
+
+        <div class="wftextbox">
+
+          <input type="text" name="dizhi">
+
+        </div>
+
+      </div>
+
+      <div class="wfbdbox">
+
+        <label class="wfbdxx"><em>*</em>付款方式</label>
+
+        <div class="wfdxbox">
+
+          <input type="radio" checked="checked" name="pay" id="b1" value="1" >
+
+          <label for="b1"><img src="fka.gif"></label>
+
+        </div>
+
+      </div>
+
+      <div class="wfbdbox">
+
+        <label class="wfbdxx">留言</label>
+
+        <div class="wftext2box">
+
+          <textarea name="liuyan" onFocus="if(value=='请尽快安排发货，送货之前手机联系，谢谢！'){value=''}" onBlur="if (value ==''){value='请尽快安排发货，送货之前手机联系，谢谢！'}">请尽快安排发货，送货之前手机联系，谢谢！</textarea>
+
+        </div>
+
+      </div>
+
+      <div class="wfsubbox">
+
+        <input type="submit" onClick="return check();" value="立即提交订单">
+
+      </div>
+
+    </form>
+
+    <div style="clear:both;"></div>
+
+  </div>
+
+</div>
+
+<div class="wffhwarp">
+
+  
+
+  <div id="wffahuo" style="overflow:hidden; width:300px; margin:0 auto;">
+
+    <div id="wffahuo1" style="overflow:hidden;"><script type="text/javascript" src="wffh.js"></script> 浙江的崔小姐&nbsp;&nbsp;[182****3408]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br> 湖北的韩小姐&nbsp;&nbsp;[159****6462]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 湖北的马小姐&nbsp;&nbsp;[158****1737]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 天津的吴小姐&nbsp;&nbsp;[187****6899]&nbsp;&nbsp;3分钟前已发货 <font color="#FF0000">√</font><br> 湖北的韩小姐&nbsp;&nbsp;[135****1711]&nbsp;&nbsp;30分钟前已发货 <font color="#FF0000">√</font><br> 陕西的段先生&nbsp;&nbsp;[131****4041]&nbsp;&nbsp;45分钟前已发货 <font color="#FF0000">√</font><br> 重庆的苏小姐&nbsp;&nbsp;[184****9798]&nbsp;&nbsp;50分钟前已发货 <font color="#FF0000">√</font><br> 天津的卢小姐&nbsp;&nbsp;[181****6791]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br> 湖南的胡先生&nbsp;&nbsp;[157****8691]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 陕西的朱先生&nbsp;&nbsp;[134****4234]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 湖南的顾小姐&nbsp;&nbsp;[139****4421]&nbsp;&nbsp;50分钟前已发货 <font color="#FF0000">√</font><br> 河南的顾小姐&nbsp;&nbsp;[135****2672]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 福建的张先生&nbsp;&nbsp;[130****5002]&nbsp;&nbsp;30分钟前已发货 <font color="#FF0000">√</font><br> 浙江的陈先生&nbsp;&nbsp;[132****5708]&nbsp;&nbsp;10分钟前已发货 <font color="#FF0000">√</font><br> 湖南的马小姐&nbsp;&nbsp;[132****7625]&nbsp;&nbsp;38分钟前已发货 <font color="#FF0000">√</font><br> 陕西的朱先生&nbsp;&nbsp;[153****9580]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 广西的顾小姐&nbsp;&nbsp;[138****9548]&nbsp;&nbsp;38分钟前已发货 <font color="#FF0000">√</font><br> 重庆的田小姐&nbsp;&nbsp;[136****6452]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br> 河北的段先生&nbsp;&nbsp;[131****6024]&nbsp;&nbsp;45分钟前已发货 <font color="#FF0000">√</font><br> 陕西的段先生&nbsp;&nbsp;[151****9086]&nbsp;&nbsp;3分钟前已发货 <font color="#FF0000">√</font><br> 河北的吴小姐&nbsp;&nbsp;[136****6290]&nbsp;&nbsp;8分钟前已发货 <font color="#FF0000">√</font><br> 天津的李先生&nbsp;&nbsp;[153****9515]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br></div>
+
+    <div id="wffahuo2"><script type="text/javascript" src="wffh.js"></script> 浙江的崔小姐&nbsp;&nbsp;[182****3408]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br> 湖北的韩小姐&nbsp;&nbsp;[159****6462]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 湖北的马小姐&nbsp;&nbsp;[158****1737]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 天津的吴小姐&nbsp;&nbsp;[187****6899]&nbsp;&nbsp;3分钟前已发货 <font color="#FF0000">√</font><br> 湖北的韩小姐&nbsp;&nbsp;[135****1711]&nbsp;&nbsp;30分钟前已发货 <font color="#FF0000">√</font><br> 陕西的段先生&nbsp;&nbsp;[131****4041]&nbsp;&nbsp;45分钟前已发货 <font color="#FF0000">√</font><br> 重庆的苏小姐&nbsp;&nbsp;[184****9798]&nbsp;&nbsp;50分钟前已发货 <font color="#FF0000">√</font><br> 天津的卢小姐&nbsp;&nbsp;[181****6791]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br> 湖南的胡先生&nbsp;&nbsp;[157****8691]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 陕西的朱先生&nbsp;&nbsp;[134****4234]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 湖南的顾小姐&nbsp;&nbsp;[139****4421]&nbsp;&nbsp;50分钟前已发货 <font color="#FF0000">√</font><br> 河南的顾小姐&nbsp;&nbsp;[135****2672]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 福建的张先生&nbsp;&nbsp;[130****5002]&nbsp;&nbsp;30分钟前已发货 <font color="#FF0000">√</font><br> 浙江的陈先生&nbsp;&nbsp;[132****5708]&nbsp;&nbsp;10分钟前已发货 <font color="#FF0000">√</font><br> 湖南的马小姐&nbsp;&nbsp;[132****7625]&nbsp;&nbsp;38分钟前已发货 <font color="#FF0000">√</font><br> 陕西的朱先生&nbsp;&nbsp;[153****9580]&nbsp;&nbsp;15分钟前已发货 <font color="#FF0000">√</font><br> 广西的顾小姐&nbsp;&nbsp;[138****9548]&nbsp;&nbsp;38分钟前已发货 <font color="#FF0000">√</font><br> 重庆的田小姐&nbsp;&nbsp;[136****6452]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br> 河北的段先生&nbsp;&nbsp;[131****6024]&nbsp;&nbsp;45分钟前已发货 <font color="#FF0000">√</font><br> 陕西的段先生&nbsp;&nbsp;[151****9086]&nbsp;&nbsp;3分钟前已发货 <font color="#FF0000">√</font><br> 河北的吴小姐&nbsp;&nbsp;[136****6290]&nbsp;&nbsp;8分钟前已发货 <font color="#FF0000">√</font><br> 天津的李先生&nbsp;&nbsp;[153****9515]&nbsp;&nbsp;1小时前已发货 <font color="#FF0000">√</font><br></div>
+
+  </div>
+
+
+
+</div>
+
+<script type="text/javascript" src="fhgd.js"></script>
+
+</body>
+
+</html>
